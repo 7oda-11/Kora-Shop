@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOTBALL HUB | المتجر الرياضي المتكامل</title>
+    <link rel="stylesheet" href="M.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 1. شريط إعلانات علوي متحرك -->
+    <div class="top-announcement">
+        <p>⚡ خصم خاص 20% على جميع الاسترزات + شحن مجاني للطلبات فوق 2000 ج.م - استخدم كود: <span>FOOTBALL2026</span> ⚡</p>
+    </div>
+
+    <!-- 2. الهيدر الرئيسي والشريط العلوي -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="brand-logo">
+                FOOTBALL <span>HUB</span>
+            </div>
+
+            <div class="search-bar">
+                <input type="text" placeholder="ابحث عن استرز، تيشرت نادي، كورة، قفازات...">
+                <button>بحث</button>
+            </div>
+
+            <div class="user-actions">
+                <a href="#" class="action-item">👤 الحساب</a>
+                <a href="#" class="action-item">❤️ المفضلة (<span>5</span>)</a>
+                <a href="#" class="action-item cart-btn">🛒 السلة (<span>3</span>)</a>
+            </div>
+        </div>
+
+        <nav class="sub-nav">
+            <a href="#hero">الرئيسية</a>
+            <a href="#showcase">معرض التفاعل</a>
+            <a href="#store-grid">كل المنتجات</a>
+            <a href="#brands">الماركات العالمية</a>
+            <a href="#teams">تيشرتات الأندية</a>
+            <a href="#accessories">المعدات والإكسسوارات</a>
+            <a href="#reviews">آراء العملاء</a>
+        </nav>
+    </header>
+
+    <!-- 3. القسم الرئيسي الترحيبي (Hero Section مع خلفية فيديو) -->
+    <section id="hero" class="hero-container">
+        <video autoplay muted loop class="hero-bg-video">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-football-player-dribbling-a-ball-41548-large.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+            <span class="hero-badge">مجموعة 2026 الحصرية</span>
+            <h1>الاحتراف يبدأ من اختيارك لمعداتك</h1>
+            <p>أكبر تشكيلة من استرزات النجيل الطبيعي والصناعي وتيشرتات الأندية العالمية المعتمدة بخامات الأصلية.</p>
+            <div class="hero-buttons">
+                <a href="#store-grid" class="btn-main">تصفح الكتالوج الكامل</a>
+                <a href="#showcase" class="btn-outline">عرض العينة المتفاعلة</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. معرض العرض المتفاعل المميز (Interactive Product Showcase) -->
+    <section id="showcase" class="showcase-section">
+        <div class="section-header">
+            <h2>🔥 المنتجات الأكثر مبيعاً هذا الأسبوع</h2>
+            <p>اضغط على أي منتج من الشريط السفلي لمعاينته بالتفصيل</p>
+        </div>
+
+        <div class="showcase-box">
+            <div class="showcase-info">
+                <span class="tag" id="sc-tag">استرز نجيل طبيعي (FG)</span>
+                <h2 id="sc-title">Nike Mercurial Superfly 9 Elite</h2>
+                <div class="rating">★★★★★ (4.9/5 بناءً على 128 تقييم)</div>
+                <div class="price-box">
+                    <span class="current-price" id="sc-price">6,200 ج.م</span>
+                    <span class="old-price">7,500 ج.م</span>
+                </div>
+                <p class="description" id="sc-desc">
+                    مصمم للسرعة الفائقة مع تقنية Zoom Air المخصصة لكرة القدم. يوفر لك أقصى درجات الثبات والتحكم بالكرة عند المناورة والتسديد في المساحات الضيقة.
+                </p>
+
+                <div class="option-group">
+                    <label>اختر المقاس:</label>
+                    <div class="selector-chips">
+                        <button class="active">40</button>
+                        <button>41</button>
+                        <button>42</button>
+                        <button>43</button>
+                        <button>44</button>
+                        <button>45</button>
+                    </div>
+                </div>
+
+                <button class="buy-now-btn">إضافة إلى السلة للطلب الفوري</button>
+            </div>
+
+            <div class="showcase-media">
+                <img id="sc-main-img" src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80" alt="Main Product">
+            </div>
+        </div>
+
+        <!-- شريط التبديل السفلي -->
+        <div class="carousel-thumbs">
+            <div class="thumb-item active" onclick="switchShowcase('استرز نجيل طبيعي (FG)', 'Nike Mercurial Superfly 9 Elite', '6,200 ج.م', 'مصمم للسرعة الفائقة مع تقنية Zoom Air المخصصة لكرة القدم، توفير أقصى درجات الثبات والتسديد.', 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=800&q=80', this)">
+                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=200&q=80" alt="Nike Cleats">
+                <span>Nike Mercurial</span>
+            </div>
+            <div class="thumb-item" onclick="switchShowcase('استرز خماسي / ترتان (TF)', 'Adidas Predator Accuracy', '5,400 ج.م', 'نعل خارجي مخصص للملاعب الخماسية والنجيل الصناعي يوفر تحكماً دقيقاً بالكرة واستقراراً تاماً.', 'https://images.unsplash.com/photo-1511556532299-8f662fc26c06?w=800&q=80', this)">
+                <img src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?w=200&q=80" alt="Adidas Cleats">
+                <span>Adidas Predator</span>
+            </div>
+            <div class="thumb-item" onclick="switchShowcase('تيشرتات الأندية', 'تيشرت ريال مدريد الأساسي 2026', '2,499 ج.م', 'القميص الرسمي بنسيج خفيف وتهوية ممتازة متضمنة كافة الشعارات الرسمية والجودة العالية.', 'https://i.pinimg.com/736x/74/6c/3b/746c3b4b6a8c933a4e1f1fae08b66ff1.jpg', this)">
+                <img src="https://i.pinimg.com/736x/74/6c/3b/746c3b4b6a8c933a4e1f1fae08b66ff1.jpg" alt="Real Madrid Jersey">
+                <span>Real Madrid Kit</span>
+            </div>
+            <div class="thumb-item" onclick="switchShowcase('كرات ومعدات', 'كرة أديداس أورلاندو معتمدة', '1,950 ج.م', 'كرة قدم بمواصفات الفيفا العالمية، طيران متوازن وضغط هواة منتظم لأعلى مستويات المباراة.', 'https://images.unsplash.com/photo-1614632537190-23e4146777db?w=800&q=80', this)">
+                <img src="https://images.unsplash.com/photo-1614632537190-23e4146777db?w=200&q=80" alt="Official Ball">
+                <span>Official Match Ball</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. المتجر الشامل مع قائمة الفلاتر وتصفية المنتجات -->
+    <section id="store-grid" class="store-layout-section">
+        <div class="section-header">
+            <h2>🛒 متجر المنتجات الشامل</h2>
+            <p>تصفح المئات من الاسترزات والتيشرتات والمعدات الرياضية</p>
+        </div>
+
+        <div class="store-wrapper">
+            <!-- جانب الفلاتر جانبي (Sidebar Filters) -->
+            <aside class="filters-sidebar">
+                <h3>تصفية النتائج</h3>
+
+                <div class="filter-group">
+                    <h4>القسم</h4>
+                    <label><input type="checkbox" checked> استرزات نجيل طبيعي</label>
+                    <label><input type="checkbox" checked> استرزات خماسي وترتان</label>
+                    <label><input type="checkbox"> تيشرتات أندية عالمية</label>
+                    <label><input type="checkbox"> كرات ومعدات تدريب</label>
+                    <label><input type="checkbox"> قفازات حراسة المرمى</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>الماركة</h4>
+                    <label><input type="checkbox" checked> Nike</label>
+                    <label><input type="checkbox" checked> Adidas</label>
+                    <label><input type="checkbox"> Puma</label>
+                    <label><input type="checkbox"> New Balance</label>
+                </div>
+
+                <div class="filter-group">
+                    <h4>السعر</h4>
+                    <input type="range" min="500" max="10000" value="5000">
+                    <p>السعر حتى: 5,000 ج.م</p>
+                </div>
+            </aside>
+
+            <!-- شبكة كروت المنتجات الضخمة (Products Grid) -->
+            <main class="products-grid">
+                <!-- كارت 1 -->
+                <div class="product-card">
+                    <span class="card-badge">جديد</span>
+                    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80" alt="Nike">
+                    <div class="card-body">
+                        <span class="category">Nike / استرزات</span>
+                        <h4>Nike Air Zoom Mercurial</h4>
+                        <p class="price">5,800 ج.م</p>
+                        <button class="add-cart">إضافة للسلة</button>
+                    </div>
+                </div>
+
+                <!-- كارت 2 -->
+                <div class="product-card">
+                    <span class="card-badge sale">-15%</span>
+                    <img src="https://images.unsplash.com/photo-1511556532299-8f662fc26c06?w=500&q=80" alt="Adidas">
+                    <div class="card-body">
+                        <span class="category">Adidas / خماسي</span>
+                        <h4>Adidas Predator X Elite</h4>
+                        <p class="price">4,900 ج.م <del>5,800 ج.م</del></p>
+                        <button class="add-cart">إضافة للسلة</button>
+                    </div>
+                </div>
+
+                <!-- كارت 3 -->
+                <div class="product-card">
+                    <img src="https://i.pinimg.com/736x/84/7c/fa/847cfac72a61c6d9a4d516d8204e51fa.jpg" alt="Jersey">
+                    <div class="card-body">
+                        <span class="category">تيشرتات / أندية</span>
+                        <h4>قميص برشلونة الأساسي 2026</h4>
+                        <p class="price">2,200 ج.م</p>
+                        <button class="add-cart">إضافة للسلة</button>
+                    </div>
+                </div>
+
+                <!-- كارت 4 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1614632537190-23e4146777db?w=500&q=80" alt="Ball">
+                    <div class="card-body">
+                        <span class="category">معدات / كرات</span>
+                        <h4>كرة الأبطال المعتمدة 2026</h4>
+                        <p class="price">1,850 ج.م</p>
+                        <button class="add-cart">إضافة للسلة</button>
+                    </div>
+                </div>
+
+                <!-- كارت 5 -->
+                <div class="product-card">
+                    <img src="https://images.unsplash.com/photo-1574629810360-7efbbe195018?w=500&q=80" alt="Training">
+                    <div class="card-body">
+                        <span class="category">ملابس / تدريب</span>
+                        <h4>تريننج باريس سان جيرمان</h4>
+                        <p class="price">3,100 ج.م</p>
+                        <button class="add-cart">إضافة للسلة</button>
+                    </div>
+                </div>
+
+                <!-- كارت 6 -->
+                <div class="product-card">
+                    <span class="card-badge">الأكثر مبيعاً</span>
+                    <img src="https://images.unsplash.com/photo-1517466787929-bc90951d0974?w=500&q=80" alt="Gloves">
+                    <div class="card-body">
+                        <span class="category">حراسة مرمى</span>
+                        <h4>قفازات Puma Future Pro</h4>
+                        <p class="price">2,750 ج.م</p>
+                        <button class="add-cart">إضافة للسلة</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <!-- 6. قسم الماركات العالمية (Brand Banner Grid) -->
+    <section id="brands" class="brands-section">
+        <div class="section-header">
+            <h2>الماركات العالمية المتاحة</h2>
+        </div>
+        <div class="brands-grid">
+            <div class="brand-box">NIKE</div>
+            <div class="brand-box">ADIDAS</div>
+            <div class="brand-box">PUMA</div>
+            <div class="brand-box">NEW BALANCE</div>
+            <div class="brand-box">UNDER ARMOUR</div>
+        </div>
+    </section>
+
+    <!-- 7. قسم آراء وتقييمات العملاء (Reviews Section) -->
+    <section id="reviews" class="reviews-section">
+        <div class="section-header">
+            <h2>💬 آراء الكباتن والعملاء</h2>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <p>"الاسترز وصل في يومين خامة أصلية جداً وثابت على النجيل الصناعي بشكل ممتاز!"</p>
+                <h5>- كابتن أحمد السيد</h5>
+                <span>★★★★★</span>
+            </div>
+            <div class="review-card">
+                <p>"تيشرتات الأندية جودتها عالية والطباعة اسم ورقم مضبوطة جداً. تجربة تكرر أكيد."</p>
+                <h5>- محمود علي</h5>
+                <span>★★★★★</span>
+            </div>
+            <div class="review-card">
+                <p>"سرعة توصيل وتعامل محترم والتغليف احترافي جداً."</p>
+                <h5>- عمر خالد</h5>
+                <span>★★★★★</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 8. الفوتر المطور والتذييل (Footer) -->
+    <footer class="footer-area">
+        <div class="footer-inner">
+            <div class="f-col">
+                <h3>FOOTBALL <span>HUB</span></h3>
+                <p>وجهتك الأولى لتجهيزات كرة القدم الشاملة في مصر والوطن العربي بأعلى جودة معتمدة.</p>
+            </div>
+            <div class="f-col">
+                <h4>الأقسام الرئيسية</h4>
+                <ul>
+                    <li><a href="#">استرزات النجيل الطبيعي</a></li>
+                    <li><a href="#">أحذية الخماسي والترتان</a></li>
+                    <li><a href="#">أطقم الأندية والمنتخبات</a></li>
+                    <li><a href="#">قفازات حراس المرمى</a></li>
+                </ul>
+            </div>
+            <div class="f-col">
+                <h4>الدعم والمساعدة</h4>
+                <ul>
+                    <li><a href="#">جدول اختيار المقاسات</a></li>
+                    <li><a href="#">سياسة الإرجاع والاستبدال</a></li>
+                    <li><a href="#">تتبع الشحنة</a></li>
+                    <li><a href="#">الأسئلة الشائعة</a></li>
+                </ul>
+            </div>
+            <div class="f-col">
+                <h4>تواصل معنا</h4>
+                <p>📍 القاهرة، مصر</p>
+                <p>📞 01000000000</p>
+                <p>✉️ support@footballhub.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة &copy; 2026 FOOTBALL HUB STORE</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript للتبديل والتفاعل -->
+    <script>
+        function switchShowcase(tag, title, price, desc, imgSrc, cardEl) {
+            document.getElementById('sc-tag').innerText = tag;
+            document.getElementById('sc-title').innerText = title;
+            document.getElementById('sc-price').innerText = price;
+            document.getElementById('sc-desc').innerText = desc;
+            document.getElementById('sc-main-img').src = imgSrc;
+
+            const thumbs = document.querySelectorAll('.thumb-item');
+            thumbs.forEach(t => t.classList.remove('active'));
+            cardEl.classList.add('active');
+        }
+    </script>
+</body>
+</html>
